@@ -1,10 +1,13 @@
-def main():
-    pet_name = input("What is the name of your pet? ")
-    pet_type = input("What kind of pet do you want to have? ")
+from methods import Pet
 
-    #creating a pet
-    my_pet = Pet(pet_name, pet_type)
-    input("Hello human! My name is " + my_pet.name +  ". Please, press enter to start the game!")
+
+def main():
+    pet_type = input("What kind of pet do you want to have? ")
+    pet_name = input("How do You call your animal? ")
+
+    # creating a pet
+    my_pet = Pet(pet_type, pet_name)
+    input("Hello human! My name is " + pet_name + ". Please, press enter to start the game!")
 
     choice = None
     while choice != 0:
@@ -16,7 +19,7 @@ def main():
             3: Teach your pet 
             4: Play with your pet
             0: Exit the game
-            
+
         """)
         break
 
@@ -34,4 +37,6 @@ def main():
         my_pet.play()
     else:
         print("Sorry that is not a valid option")
+
+
 main()
